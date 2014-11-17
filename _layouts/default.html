@@ -15,12 +15,11 @@
 
 <div class="sidebar2">
 <div class="sidebar2">
-<div class="Block">
+    <div class="Block">
     <div class="Block-body">
 <div class="BlockHeader">
     <div class="header-tag-icon">
-        <div class="BlockHeader-text">
-Search        </div>
+        <div class="BlockHeader-text">分类</div>
     </div>
     <div class="l"></div>
     <div class="r"><div></div></div>
@@ -36,29 +35,24 @@ Search        </div>
     <div class="BlockContent-cr"><div></div></div>
     <div class="BlockContent-cc"></div>
     <div class="BlockContent-body">
-<form method="get" id="searchform" action="http://www.freewordpressthemes4u.com/preview/">
-<input type="text" value="" name="s" id="s" style="width: 95%;" />
-<button class="Button" type="submit" name="search">
-        <span class="btn">
-            <span class="t">Search</span>
-            <span class="r"><span></span></span>
-            <span class="l"></span>
-        </span>
-</button>
+<ul>
+{% for category in site.categories %}
+      <li class="cat-item cat-item-1"><a href="#">{{ category[0] }}</a>({{ category[1].size }})</li>
+    {% endfor %}
 
-</form>
-
+</ul>
     </div>
 </div>
 
     </div>
 </div>
-<div class="Block">
+
+
+ <div class="Block">
     <div class="Block-body">
 <div class="BlockHeader">
     <div class="header-tag-icon">
-        <div class="BlockHeader-text">
-Archives        </div>
+        <div class="BlockHeader-text">标签</div>
     </div>
     <div class="l"></div>
     <div class="r"><div></div></div>
@@ -74,12 +68,54 @@ Archives        </div>
     <div class="BlockContent-cr"><div></div></div>
     <div class="BlockContent-cc"></div>
     <div class="BlockContent-body">
-                    <p>You are currently browsing the <a href="http://www.freewordpressthemes4u.com/preview/?preview=1&amp;template=stretch_of_houses_hoe005&amp;stylesheet=stretch_of_houses_hoe005">Free WordPress Themes Preview</a> blog archives for July, 2009.</p>
+<ul>
+{% for tag in site.tags %}
+      <li class="cat-item cat-item-1"><a href="#">{{ tag[0] }}</a>({{ tag[1].size }})</li>
+    {% endfor %}
+
+</ul>
+    </div>
+</div>
+
+    </div>
+</div>
 
 
 
+
+
+<div class="Block">
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">归档</div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-tl"></div>
+    <div class="BlockContent-tr"><div></div></div>
+    <div class="BlockContent-bl"><div></div></div>
+    <div class="BlockContent-br"><div></div></div>
+    <div class="BlockContent-tc"><div></div></div>
+    <div class="BlockContent-bc"><div></div></div>
+    <div class="BlockContent-cl"><div></div></div>
+    <div class="BlockContent-cr"><div></div></div>
+    <div class="BlockContent-cc"></div>
+    <div class="BlockContent-body">
       <ul>
-        <li><a href='http://www.freewordpressthemes4u.com/preview/?m=200907&amp;preview=1&amp;template=stretch_of_houses_hoe005&amp;stylesheet=stretch_of_houses_hoe005' title='July 2009'>July 2009</a></li>
+        {% for post in site.posts reverse %}
+            {% capture date %}{{ post.date }}{% endcapture %}
+            {% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
+            {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
+            {% capture next_month %}{{ post.next.date | date: "%m" }}{% endcapture %}
+
+            {% if this_month != next_month %}
+                <li><a href="#">{{ post.date | date: '%Y-%m' }}</a></li>
+            {% endif %}
+        {% endfor %}
+
       </ul>
 
     </div>
@@ -87,42 +123,13 @@ Archives        </div>
 
     </div>
 </div>
-<div class="Block">
-    <div class="Block-body">
-<div class="BlockHeader">
-    <div class="header-tag-icon">
-        <div class="BlockHeader-text">
-Categories        </div>
-    </div>
-    <div class="l"></div>
-    <div class="r"><div></div></div>
-</div>
-<div class="BlockContent">
-    <div class="BlockContent-tl"></div>
-    <div class="BlockContent-tr"><div></div></div>
-    <div class="BlockContent-bl"><div></div></div>
-    <div class="BlockContent-br"><div></div></div>
-    <div class="BlockContent-tc"><div></div></div>
-    <div class="BlockContent-bc"><div></div></div>
-    <div class="BlockContent-cl"><div></div></div>
-    <div class="BlockContent-cr"><div></div></div>
-    <div class="BlockContent-cc"></div>
-    <div class="BlockContent-body">
-<ul>
-  	<li class="cat-item cat-item-1"><a href="http://www.freewordpressthemes4u.com/preview/?cat=1&amp;preview=1&amp;template=stretch_of_houses_hoe005&amp;stylesheet=stretch_of_houses_hoe005" title="View all posts filed under Uncategorized">Uncategorized</a> (2)
-</li>
-</ul>
-    </div>
-</div>
 
-    </div>
-</div>
 <div class="Block">
     <div class="Block-body">
 <div class="BlockHeader">
     <div class="header-tag-icon">
         <div class="BlockHeader-text">
-Links:        </div>
+链接        </div>
     </div>
     <div class="l"></div>
     <div class="r"><div></div></div>
@@ -139,13 +146,7 @@ Links:        </div>
     <div class="BlockContent-cc"></div>
     <div class="BlockContent-body">
 <ul>
-      <li><a href="#" onclick="return false;">Development Blog</a></li>
-<li><a href="#" onclick="return false;">Documentation</a></li>
-<li><a href="#" onclick="return false;">Plugins</a></li>
-<li><a href="#" onclick="return false;">Suggest Ideas</a></li>
-<li><a href="#" onclick="return false;">Support Forum</a></li>
-<li><a href="#" onclick="return false;">Themes</a></li>
-<li><a href="#" onclick="return false;">WordPress Planet</a></li>
+<li><a href="http://holbrook.github.com" target="_blank">爸爸的博客</a></li>
       </ul>
     </div>
 </div>
@@ -160,13 +161,13 @@ Links:        </div>
 <div id=footernav style='text-align:left;'>
 
 </div><div class="cleared"></div>
-
-
-    {% include footer.html %}
+{% include footer.html %}
 </div>
 </div>
-<div><p class="page-footer">Powered by <a rel=nofollow href="#" onclick="return false;">WordPress</a> and
-<a href="#" onclick="return false;">free wordpress themes 4 u.com</a> </p><style>
+<div>
+    <p class="page-footer">Powered by <a rel=nofollow href="https://github.com/taylor-steven" onclick="return false;">Github</a> and
+<a href="#" onclick="return false;">Jekyll</a> </p>
+<style>
 
 
 h1.logo-name, h1.logo-name a, h1.logo-name a:link, h1.logo-name a:visited, h1.logo-name a:hover{
@@ -175,11 +176,6 @@ h1.logo-name, h1.logo-name a, h1.logo-name a:link, h1.logo-name a:visited, h1.lo
 }
 .logo{
 }
-
-
-
-
-
 
 
 </style>

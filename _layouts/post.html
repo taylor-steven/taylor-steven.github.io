@@ -1,15 +1,23 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div class="Post">
+    <div class="Post-body">
+<div class="Post-inner article">
+    <h2 class="PostHeaderIcon-wrapper">
+        <img src="/images/PostHeaderIcon.png" width="26" height="25" alt="PostHeaderIcon">
+        <span class="PostHeader"><a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ page.title }}</a></span>
+    </h2>
+    <div class="PostContent">
+        {{ content }}
+    </div>
+    <div class="cleared"></div>
+    <div class="PostMetadataFooter">
+        <div class="PostFooterIcons metadata-icons">{{ page.date | date: '%Y-%m-%d' }}&nbsp;&nbsp;
+            分类：<a href="#" rel="category">xxx</a> | 
+            标签：<a href="#" rel="tag">xxx</a>, <a href="tag">xxx</a>
+        </div>
+    </div>
 </div>
+</div></div>
