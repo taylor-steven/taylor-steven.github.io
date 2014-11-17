@@ -3,7 +3,7 @@ layout: post
 title: "佛像要钱有用吗？"
 date: 2014-11-17
 comments: true
-categories: 
+categories: 童言无忌 
 ---
 
 “爸爸，我给佛像100快钱，他高兴吗？”

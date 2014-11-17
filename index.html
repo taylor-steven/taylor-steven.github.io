@@ -2,22 +2,24 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+{% for post in site.posts %}
+<div class="Post">
+    <div class="Post-body">
+<div class="Post-inner article">
+    <h2 class="PostHeaderIcon-wrapper">
+        <img src="/images/PostHeaderIcon.png" width="26" height="25" alt="PostHeaderIcon">
+        <span class="PostHeader"><a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a></span>
+    </h2>
+    <div class="PostContent">
+        {{post.content}}
+    </div>
+    <div class="cleared"></div>
+    <div class="PostMetadataFooter">
+        <div class="PostFooterIcons metadata-icons">
+            分类：<a href="#" rel="category">xxx</a> | 
+            标签：<a href="#" rel="tag">xxx</a>, <a href="tag">xxx</a>
+        </div>
+    </div>
 </div>
+</div></div>
+{% endfor %}
