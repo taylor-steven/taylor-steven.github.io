@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[]]></title>
-  <link href="/atom.xml" rel="self"/>
-  <link href="/"/>
-  <updated>2014-11-17T00:06:25+08:00</updated>
-  <id>/</id>
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://taylor-steven.github.io/atom.xml" rel="self"/>
+  <link href="http://taylor-steven.github.io/"/>
+  <updated>2014-11-17T00:12:05+08:00</updated>
+  <id>http://taylor-steven.github.io/</id>
   <author>
-    <name><![CDATA[]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[小吊梨汤]]></title>
-    <link href="/2014/11/16/xiaodiaolitang.html"/>
-    <updated>2014-11-16T23:27:23+08:00</updated>
-    <id>/2014/11/16/xiaodiaolitang</id>
-    <content type="html"><![CDATA[<p>小吊梨汤，还有大鱼缸</p>
-
-<p><img src="/assets/photos/IMG_20141109_124530.jpg" alt="" /></p>
+    <title type="html"><![CDATA[我已经懒到一定境界了吧！]]></title>
+    <link href="http://taylor-steven.github.io/blog/2014/11/15/so_lazy/"/>
+    <updated>2014-11-15T00:00:00+08:00</updated>
+    <id>http://taylor-steven.github.io/blog/2014/11/15/so_lazy</id>
+    <content type="html"><![CDATA[<p><img src="http://taylor-steven.github.io/assets/photos/IMG_20141115_110608.jpg" alt="" /></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[我已经懒到一定境界了吧！]]></title>
-    <link href="/2014/11/16/so_lazy.html"/>
-    <updated>2014-11-16T22:16:38+08:00</updated>
-    <id>/2014/11/16/so_lazy</id>
-    <content type="html"><![CDATA[<p><img src="/assets/photos/IMG_20141115_110608.jpg" alt="" /></p>
+    <title type="html"><![CDATA[小吊梨汤]]></title>
+    <link href="http://taylor-steven.github.io/blog/2014/11/09/xiaodiaolitang/"/>
+    <updated>2014-11-09T00:00:00+08:00</updated>
+    <id>http://taylor-steven.github.io/blog/2014/11/09/xiaodiaolitang</id>
+    <content type="html"><![CDATA[<p>小吊梨汤，还有大鱼缸</p>
+
+<p><img src="http://taylor-steven.github.io/assets/photos/IMG_20141109_124530.jpg" alt="" /></p>
 ]]></content>
   </entry>
   

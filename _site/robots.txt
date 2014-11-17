@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: 
 
-Sitemap: /sitemap.xml 
+Sitemap: http://taylor-steven.github.io/sitemap.xml 
+xml 
