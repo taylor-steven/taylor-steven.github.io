@@ -4,9 +4,7 @@ lsi:            false
 highlighter:    pygments
 permalink:      /:year/:month/:day/:title.html
 author:			Taylor Steven (taylor.steven.wong@gmail.com)
-title:          '泰来的博客'
-site:
-    title:          '泰来的博客'
+title:          '泰来的永恒城堡'
 url:            http://taylor-steven.github.io
-description:    "泰来的博客"
+description:    "我的成长日记"
 feed:           /atom.xml
